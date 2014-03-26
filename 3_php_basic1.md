@@ -84,7 +84,7 @@ fs01.local/public/SystemTraining/2014
 
 index.phpというファイル名で保存
 
-```
+```php
 <?php
 echo 'Hello World!';
 ?>
@@ -106,7 +106,7 @@ http://fs01.local/SystemTraining/2014/wadap/index.php
 # はじめてのPHP
 それではさっき書いたPHPをもう一度みてみましょう。
 
-```
+```php
 <?php
 echo 'Hello World!';
 ?>
@@ -121,7 +121,7 @@ echo 'Hello World!';
 ### PHPの開始と終了
 まず重要なポイントはここです。PHPは```<?php .... ?>```でかこまれたこの部分をPHPのプログラムとして解釈します。ここでかこまれた部分をPHPが解釈できなくなるとエラーが発生します。それでは以下のコードにかきかえてみてください。
 
-```
+```php
 <?php
 
 echo 'Hello World!';
@@ -137,7 +137,7 @@ aaaaaaaaaaaaaaaa
 ### 上記以外の場所にかくとどうなる？
 それでは以下のコードを実行してみてください。
 
-```
+```php
 <p>
 <?php
 echo 'Hello World!';
@@ -156,7 +156,7 @@ echo 'Hello World!';
 
 それでは感覚を使うためにも以下のコードをかいてみてください。
 
-```
+```php
 <?php
 
 echo "Hello World 1";
@@ -173,7 +173,7 @@ echo "Hello World 3";
 
 それでは、次は以下のコードを実行してみましょう。
 
-```
+```php
 <?php
 
 $val = 'hogehoge';
