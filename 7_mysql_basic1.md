@@ -1,4 +1,4 @@
-6章：MySQLの基礎4
+6章：MySQLの基礎1
 ===
 
 # 前回までの復習
@@ -167,7 +167,7 @@ SELECT firstname, lastname FROM users;
 
 ### 順序指定
 
-```
+```sql
 ;; 昇順
 SELECT firstname, lastname FROM users ORDER BY firstname ASC; // 
 ;; 降順
