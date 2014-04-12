@@ -144,7 +144,7 @@ HTMLを専門的に書く人を、コーダー・マークアップエンジニ�
 <title>Title</title>
 </head>
 <body>
-<h1>heading1<h1>
+<h1>heading1</h1>
 <p>hello world</p>
 <h2>heading2</h2>
 <ul>
