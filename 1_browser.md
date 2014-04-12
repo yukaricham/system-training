@@ -190,7 +190,7 @@ HTMLは文章に対して意味付けを行うためのものです。そのた�
 <title>Title</title>
 </head>
 <body>
-<h1>heading1<h1>
+<h1>heading1</h1>
 <p>hello world. <font color="red">Thank you</font></p>
 </body>
 </html>
@@ -214,7 +214,7 @@ HTMLは文章に対して意味付けを行うためのものです。そのた�
 </style>
 </head>
 <body>
-<h1>heading1<h1>
+<h1>heading1</h1>
   <p>hello world. <span class="thankyou">Thank you</span></p>
 </body>
 </html>
