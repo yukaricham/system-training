@@ -1,5 +1,4 @@
 2章：HTMLとCSSで組むレイアウト
-
 ===
 
 # インライン要素とブロック要素
@@ -7,7 +6,7 @@
 ## ブロック要素
 HTMLには様々なタグがありますが、大きく分けてインライン要素とブロック要素の2つに分類することができます。それでは実際に試してみましょう。
 
-```
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,7 +23,7 @@ HTMLには様々なタグがありますが、大きく分けてインライン�
 
 それでは上記のHTMLを貼り付けて表示させてみましょう。```<p></p>```で囲まれた部分がそれぞれ改行されていると思います。このように、囲むことによって改行されるHTMLタグのことを **ブロック要素** と呼びます。それでは、わかりやすく背景色をつけてみましょう。
 
-```
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -54,7 +53,7 @@ CSSでそれぞれのPタグに対して背景色をつけてみました。id�
 
 ## インライン要素
 
-```
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -70,7 +69,7 @@ CSSでそれぞれのPタグに対して背景色をつけてみました。id�
 今回はインライン要素として```<b></b>```タグを使用しました。このタグはBOLDの意味で、文字を太くするためのタグです。このように、インライン要素はその行の中で使われることが想定されているので改行されません。それではCSSで背景色をつけてみましょう。
 
 
-```
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -101,7 +100,7 @@ CSSでそれぞれのPタグに対して背景色をつけてみました。id�
 CSSではセレクタというものをつかって、HTMLの指定した部分を装飾します。HTMLの中に、classとかidという表記がでてきますがそれをCSS側で指定してスタイルを適用することができます。まずよく使用される3つのセレクタを紹介します。
 
 
-```
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -144,7 +143,7 @@ CSSではセレクタというものをつかって、HTMLの指定した部分�
 
 HTML内で、id/classを指定する場合は以下のようにして記述します。上記の一部抜粋です。
 
-```
+```html
   <p class="p1">paragraph is here 1</p>
   <p id="p2">paragraph is here 3</p>
 ```
@@ -152,7 +151,7 @@ HTML内で、id/classを指定する場合は以下のようにして記述し�
 このように、タグの中の要素として```class=...```や```id=...```という値をつけることでCSSから参照をすることができます。
 それぞれのCSSからの参照方法は以下のようになります。
 
-```
+```css
   .p1{
     background-color:red;
   }
@@ -185,7 +184,7 @@ class指定したものは```.クラス名```、id指定したものは```#id名
 
 それでは以下のHTMLを見てください。結構ながい記述です。
 
-```
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
@@ -215,19 +214,23 @@ class指定したものは```.クラス名```、id指定したものは```#id名
        clear: both;
        background-color:blue;
      }
+     .clearfix:after {
+       content: ".";
+       display: block;
+       height: 0;
+       clear: both;
+       visibility: hidden;
+     }
+     .clearfix { display: inline-table; }
     </style>
   </head>
   <body>
     <div id="header">
-    header
+      header
     </div>
-    <div id="main">
+    <div id="main" class="clearfix">
       <div id="content">
         <h2>Content is here</h2>
-        <p>this is paragrapth.</p>
-        <p>this is paragrapth.</p>
-        <p>this is paragrapth.</p>
-        <p>this is paragrapth.</p>
         <p>this is paragrapth.</p>
         <p>this is paragrapth.</p>
       </div>
@@ -237,15 +240,11 @@ class指定したものは```.クラス名```、id指定したものは```#id名
           <li><a href="#">list A</a></li>
           <li><a href="#">list B</a></li>
           <li><a href="#">list C</a></li>
-          <li><a href="#">list D</a></li>
-          <li><a href="#">list E</a></li>
-          <li><a href="#">list F</a></li>
-          <li><a href="#">list G</a></li>
         </ul>
       </div>
     </div>
     <div id="footer">
-    footer
+      footer
     </div>
   </body>
 </html>
