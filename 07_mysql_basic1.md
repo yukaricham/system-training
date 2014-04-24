@@ -78,7 +78,7 @@ ssh dev@lab103.rkst.jp
 
 ```
 mysql -uroot -p
-user dev;
+use dev;
 ```
 
 # SQLを書こう
