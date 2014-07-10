@@ -138,3 +138,34 @@ $a->end   = 10;
 echo $a->calc(); // 55
 ?>
 ```
+
+## コンストラクタとデストラクタ
+
+```
+<?php
+
+class Foo {
+   function __construct() {
+   		echo "hogehoge";
+   }	
+}
+?>
+
+$a = new Foo();
+```
+
+```
+<?php
+
+class Foo {
+   function __construct($a) {
+   		echo $a;
+   }	
+}
+
+$a = new Foo("hogehoge");
+?>
+
+
+```
+
